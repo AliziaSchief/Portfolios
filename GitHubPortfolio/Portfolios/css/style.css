@@ -1,0 +1,87 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .about-me {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 60px);
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+           min-height: 100vh;
+        }
+
+        .main-heading {
+            grid-column: 2 / 3;
+            grid-row: 3 / 12;
+            background-color: #4dd0e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 0.5vw;
+            color: #000;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            max-width: 5vw;
+      
+        }
+
+        .bio-text {
+            grid-column: 3 / 7;
+            grid-row: 3 / 12;
+            background-color: #4dd0e1;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000;
+            overflow: auto;
+        }
+
+        .bio-text p{
+            padding: 1rem;
+        }
+
+        .profile-image {
+            grid-column: 8 / 12;
+            grid-row: 3 / 9;
+            background-color: #ffcc02;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .contact-btn {
+            grid-column: 10 / 12;
+            grid-row: 11 / 12;
+            background-color: #8bc34a;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #689f38;
+        }
+
+        /* Grid-Hilfslinien (optional, zum Debugging) */
+        .about-me::before {
+            content: '';
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+            pointer-events: none;
+          
+        }
